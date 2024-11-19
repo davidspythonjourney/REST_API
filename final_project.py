@@ -62,8 +62,7 @@ def updateTask(task_id):
 
 @app.route("/tasks/<task_id>", methods=["DELETE"])
 def deleteTask(task_id):
-    global json_task_num
-    global tasks
+    global tasks, json_task_num
     if task_id in tasks:
         if tasks[task_id]["completed"] is True:
             del tasks[task_id]
